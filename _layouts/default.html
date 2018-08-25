@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>{{page.title}}</title>
+	<link rel="stylesheet" href="../CSS/main.css">
 </head>
 <body>
-	{{content}}
+	<div id="sidebar">
+		<div class="information">
+			<div class="avatar">
+				<a href="../index.html">
+					<img src="../IMG/banner1.png" alt="avatar">
+				</a>
+			</div>
+			<div class="myself">
+				<p id="name">
+					<a href="../index.html">XINSHUI</a>
+				</p>
+				<br>
+				<p class="about">
+					Web front-end development novice
+				</p>
+				<br>
+				<div class="font">
+					<a href="#">About me</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="about">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi eius enim non, perspiciatis iusto ab numquam voluptatem dolore esse, modi inventore odio culpa repellat magni expedita adipisci ad nemo nobis!
+	</div>
+	<div id="content">
+		{{ content }}
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script src="../JS/click.js"></script>
+	<script>
+		$('.font').click(function () {
+			$('#content').fadeToggle(500);
+			$('#about').fadeToggle(500);
+		})
+	</script>
 </body>
+</html>
 </html>
