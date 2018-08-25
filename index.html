@@ -1,0 +1,33 @@
+---
+laayout: default
+title: My blog_jekyll
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blog</title>
+	<style>
+	h1{
+		color: red;
+		background: black;
+		border: 2px solid green;
+	}
+</style>
+</head>
+<body>
+	<h1>{{page.title}}</h1>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo inventore corporis unde laborum culpa dignissimos voluptates maxime velit quidem soluta, fugit laudantium, possimus nostrum, aperiam, minus quia? A, quos inventore.
+	</p>
+	<ul>
+		{% for post in site.posts %}
+		<li>
+			{{post.data | data_to_string}}
+			<a href="{{ site.baseurl }}{{post.url}}">{{post.title}}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</body>
+</html>
