@@ -27,7 +27,13 @@ title: My blog_jekyll
 			{{post.data | data_to_string}}
 			<a href="{{ site.baseurl }}{{post.url}}">{{post.title}}</a>
 		</li>
+		<li>
+			{{post.data | data_to_string}}
+			<a href="{{ site.baseurl }}{{post.url}}">{{post.title}}</a>
+		</li>
 		{% endfor %}
 	</ul>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script src="JS/live2d.js"></script>
 </body>
 </html>
