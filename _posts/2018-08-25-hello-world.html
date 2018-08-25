@@ -1,6 +1,6 @@
 ---
-laayout: default
-title: My blog_jekyll
+layout: default
+title: Test
 ---
 
 <!DOCTYPE html>
@@ -8,19 +8,19 @@ title: My blog_jekyll
 <head>
 	<meta charset="UTF-8">
 	<title>Xinshui</title>
-	<link rel="stylesheet" href="CSS/main.css">
+	<link rel="stylesheet" href="../CSS/main.css">
 </head>
 <body>
 	<div id="sidebar">
 		<div class="information">
 			<div class="avatar">
-				<a href="index.html">
-					<img src="IMG/banner1.png" alt="avatar">
+				<a href="../index.html">
+					<img src="../IMG/banner1.png" alt="avatar">
 				</a>
 			</div>
 			<div class="myself">
 				<p id="name">
-					<a href="index.html">XINSHUI</a>
+					<a href="../index.html">XINSHUI</a>
 				</p>
 				<br>
 				<p class="about">
@@ -37,21 +37,16 @@ title: My blog_jekyll
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi eius enim non, perspiciatis iusto ab numquam voluptatem dolore esse, modi inventore odio culpa repellat magni expedita adipisci ad nemo nobis!
 	</div>
 	<div id="content">
-	<ul>
-		{% for post in site.posts %}
-		<li class="article">
-			{{post.data | data_to_string}}
-			<a href="{{ site.baseurl }}{{post.url}}">{{post.title}}</a>
-		</li>
-		<li class="article">
-			{{post.data | data_to_string}}
-			<a href="{{ site.baseurl }}{{post.url}}">{{post.title}}</a>
-		</li>
-		{% endfor %}
-	</ul>
+		<h1 class="pagesTitle">{{page.title}}</h1>
+		<div id="br"></div>
+		<br>
+		<p class="mainPages">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sunt recusandae, provident, similique inventore aperiam aliquid harum repellendus assumenda sapiente libero non nemo iusto magni, quasi sequi facilis atque blanditiis.
+		</p>
+		{{page.data | data_to_string}}
 	</div>
 	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-	<script src="JS/click.js"></script>
+	<script src="../JS/click.js"></script>
 	<script>
 		$('.font').click(function () {
 			$('#content').fadeToggle(500);
